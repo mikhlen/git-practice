@@ -1,0 +1,12 @@
+name: Hello World                 # display name in the Actions tab — cosmetic only
+
+on:                                # TRIGGER — what makes this run
+  push:
+    branches: [main]
+
+jobs:                              # a workflow has one or more jobs
+  say-hello:                       # this is a job ID — your name for it
+    runs-on: ubuntu-latest         # what kind of machine runs it
+    steps:                         # a job has an ordered list of steps
+      - name: Print a message      # step name — shown in logs, optional but recommended
+        run: echo "Hello from Actions"
